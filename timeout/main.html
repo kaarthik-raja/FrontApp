@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Text</title>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+
+
+<div id="n1">
+<p id ="hi">abc</p>
+<button  onclick="stop()">Stop</button>
+
+<script>
+
+var repeat;
+var num=0;
+	var list=["abc","def","ghi"];
+    repeat= setInterval(repeater, 3000);
+	document.getElementById("n2").style.display="none";
+
+
+
+function repeater(){
+	document.getElementById('hi').innerHTML=list[num%3];
+	document.getElementById("hi").style.opacity=1;
+
+	setTimeout(function(){
+	document.getElementById("hi").style.opacity=0;
+		}, 2500);
+	num++;
+}
+repeater();
+function stop(){
+	clearInterval(repeat);
+	setTimeout(function(){ document.getElementById("n1").style.display="none";
+		document.getElementById("n2").style.display="block";
+
+			},3000);
+}
+</script>
+<style type="text/css">#hi {
+    margin-top: 10px;
+    font-size: 32px;
+    color:red;
+    opacity: 0;
+    text-align: center;
+    transition: opacity 0.5s ease-in;
+
+}
+</style>
+</div>
+</body>
+</html>

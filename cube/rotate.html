@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cube</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+	
+<script type="text/javascript">
+var repeat;
+var num=0;
+repeat= setInterval(repeater, 10000);
+repeater()
+function repeater(){
+document.getElementById('hi').innerHTML+="hi";
+if (num%2==0){
+	changed('t','r');
+}
+else{
+	changed('r','t');
+}
+num+=1;
+}
+function stop(){
+	clearInterval(repeat);
+}
+
+function changed(f,r) {
+document.getElementById('hi').innerHTML+="hi123";
+
+  var cols =     document.getElementsByClassName(f+'1');
+  var rows =     document.getElementsByClassName(r+'1');
+
+  for(i=0; i<4; i++) {
+    cols[i].style.display = 'none';
+    rows[i].style.display='inline-block';
+  }
+   cols =     document.getElementsByClassName(f+'2');
+  	rows =     document.getElementsByClassName(r+'2');
+
+  for(i=0; i<cols.length; i++) {
+    cols[i].style.display = 'none';
+    rows[i].style.display='inline-block';
+
+  }
+   cols =     document.getElementsByClassName(f+'3');
+  rows =     document.getElementsByClassName(r+'3');
+
+  for(i=0; i<cols.length; i++) {
+    cols[i].style.display = 'none';
+    rows[i].style.display='inline-block';
+
+  }
+}
+
+</script>
+</head>
+<body onload="changed('r','t')">
+<p id='hi'>hello</p>
+<button onclick="stop()">Stop</button>
+<div id="ft">
+	<div  class="t1 f1t face "><div class="cubeboxt red "></div><div class="cubeboxt blue"></div><div class="cubeboxt green"></div></div>
+	<div class="t2 f1t face"><div class="cubeboxt white"></div><div class="cubeboxt yellow"></div><div class="cubeboxt purple"></div></div>	
+	<div class="t3 f1t face"><div class="cubeboxt red"></div><div class="cubeboxt yellow"></div><div class="cubeboxt white"></div></div>
+</div>
+<div id="fr">
+	<div  class=" f1r face r1" ><div class="cubeboxr red"></div><div class="cubeboxr white"></div><div class="cubeboxr red"></div></div>
+	<div class="r2 f1r face"><div class="cubeboxr blue"></div><div class="cubeboxr yellow"></div><div class="cubeboxr yellow"></div></div>	
+	<div class="r3 f1r face"><div class="cubeboxr green"></div><div class="cubeboxr purple"></div><div class="cubeboxr white"></div></div>
+</div>
+<div id="l">
+	<div  class="t1 f2 face" ><div class="cubeboxt red"></div><div class="cubeboxt blue"></div><div class="red cubeboxt"></div></div>
+	<div class="t2 f2 face"><div class="cubeboxt white"></div><div class="cubeboxt yellow"></div><div class="cubeboxt purple"></div></div>	
+	<div class="t3 f2 face"><div class="cubeboxt red"></div><div class="cubeboxt yellow"></div><div class="cubeboxt white"></div></div>
+
+</div>
+<div id="bat" >
+	<div  class="t1 f3t face"><div class="cubeboxt green"></div><div class="cubeboxt blue"></div><div class="cubeboxt green"></div></div>
+	<div class="t2 f3t face"><div class="cubeboxt blue"></div><div class="cubeboxt purple"></div><div class="cubeboxt purple"></div></div>	
+	<div class="t3 f3t face"><div class="cubeboxt purple"></div><div class="cubeboxt yellow"></div><div class="cubeboxt white"></div></div>
+
+</div>
+<div id="bar">
+	<div  class="r1 f3r face"><div class="cubeboxr green"></div><div class="cubeboxr blue"></div><div class="cubeboxr green"></div></div>
+	<div class="r2 f3r face"><div class="cubeboxr blue"></div><div class="cubeboxr purple"></div><div class="cubeboxr purple"></div></div>	
+	<div class="r3 f3r face"><div class="cubeboxr purple"></div><div class="cubeboxr yellow"></div><div class="cubeboxr white"></div></div>
+
+</div>
+<div id="r">
+	<div  class="t1 f4 face"><div class="cubeboxt red"></div><div class="cubeboxt blue"></div><div class="cubeboxt green"></div></div>
+	<div class="t2 f4 face"><div class="cubeboxt white"></div><div class="cubeboxt yellow"></div><div class="cubeboxt purple"></div></div>	
+	<div class="t3 f4 face"><div class="cubeboxt red"></div><div class="cubeboxt yellow"></div><div class="cubeboxt white"></div></div>
+
+
+</div>
+<div id="t">
+	<div  class="r1 f5 face"><div class="cubeboxr red"></div><div class="cubeboxr blue"></div><div class="cubeboxr green"></div></div>
+	<div class="r2 f5 face"><div class="cubeboxr white"></div><div class="cubeboxr yellow"></div><div class="cubeboxr purple"></div></div>	
+	<div class="f5 face r3 "><div class=" red cubeboxr"></div><div class="yellow cubeboxr"></div><div class=" white cubeboxr"></div></div>
+
+</div>
+<div id="bo"r
+	<div  class="r1 f6 face"><div class="cubeboxr red"></div><div class="cubeboxr blue"></div><div class="cubeboxr green"></div></div>
+	<div class="r2 f6 face"><div class="cubeboxr white"></div><div class="cubeboxr yellow"></div><div class="cubeboxr purple"></div></div>	
+	<div class="r3 f6 face"><div class="cubeboxr red"></div><div class="cubeboxr yellow"></div><div class="cubeboxr white"></div></div>
+
+</div>
+
+
+<script type="text/javascript">
+
+
+
+</script>
+<style type="text/css">
+
+/*.t1,.t2,.t3{
+	display: none;
+}
+*/
+/*.r3{
+	display: none;
+}
+.r1,.r2{
+	display: none;
+}
+
+
+.dispnone{
+	display: none;
+}
+.dispin{
+	display: inline-block;
+}*/
+</style></body></html>
